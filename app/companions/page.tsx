@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Page = () => {
+const CompanionsLibrary = () => {
   return (
-    <div>Page</div>
+    <div>CompanionsLibrary</div>
   )
 }
-export default Page
+export default CompanionsLibrary
