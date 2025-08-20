@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/select";
 import {subjects} from "@/constants";
 import {Textarea} from "@/components/ui/textarea";
-// import {createCompanion} from "@/lib/actions/companion.actions.md";
+import {createCompanion} from "@/lib/actions/companion.actions";
 import {redirect} from "next/navigation";
 
 const formSchema = z.object({
@@ -34,7 +34,9 @@ const formSchema = z.object({
   duration: z.coerce.number().min(1, {message: 'Duration is required.'}),
 })
 
+
 const CompanionForm = () => {
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

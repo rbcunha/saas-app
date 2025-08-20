@@ -1,4 +1,5 @@
-import {subjects} from "@/constants";
+// "use client"
+
 import Link from "next/link";
 
 interface CompanionCardProps {
@@ -22,7 +23,7 @@ const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCar
       </div>
 
       <h2 className="text-2xl font-bold">{name}</h2>
-      <p className="text-sm" >{topic}</p>
+      <p className="text-sm">{topic}</p>
       <div className="flex items-center gap-2" >
         <img src="/icons/clock.svg" alt="duration" width={13.5} height={13.5}/>
         <p className="text-sm" >{duration} minutes</p >

@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 import React, { useEffect, useState } from "react";
 import {
   Select,
@@ -13,7 +12,6 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { formUrlQuery, removeKeysFromUrlQuery } from "@jsmastery/utils";
 
-
 const SubjectFilter = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -26,7 +24,7 @@ const SubjectFilter = () => {
     if (subject === "all") {
       newUrl = removeKeysFromUrlQuery({
         params: searchParams.toString(),
-      keysToRemove: [subject],
+        keysToRemove: ["subject"],
       });
     } else {
       newUrl = formUrlQuery({
@@ -52,6 +50,7 @@ const SubjectFilter = () => {
         ))}
       </SelectContent>
     </Select>
-  )
-}
-export default SubjectFilter
+  );
+};
+
+export default SubjectFilter;
